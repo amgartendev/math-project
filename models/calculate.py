@@ -85,4 +85,4 @@ class Calculate:
         return right_answer
 
     def show_operation(self: object) -> None:
-        pass
+        print(f'{self.value1} {self._operation_symbol} {self.value2} = ?')

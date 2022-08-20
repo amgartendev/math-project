@@ -20,7 +20,7 @@ def play(score: int) -> None:
         score += 1
         print(f'You have {score} pts')
 
-    continuar: int = int(input('Want to continue? (1 - Yes, 2 - No): '))
+    continuar: int = int(input('Want to continue? (1 - Yes, 0 - No): '))
 
     if continuar:
         play(score)
