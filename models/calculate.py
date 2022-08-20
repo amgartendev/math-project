@@ -52,5 +52,5 @@ class Calculate:
     def check_result(self: object, user: int) -> bool:
         pass
 
-    def show_operation(self: object, user: int) -> None:
+    def show_operation(self: object) -> None:
         pass
