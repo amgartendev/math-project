@@ -52,6 +52,15 @@ class Calculate:
             if self.operation == 3:
                 return self.value1 * self.value2
 
+    @property
+    def _operation_symbol(self: object) -> str:
+        if self.operation == 1:
+            return '+'
+        elif self.operation == 2:
+            return '-'
+        else:
+            return '*'
+
     def __str__(self: object) -> str:
         op: str = ''
         if self.operation == 1:
@@ -65,7 +74,15 @@ class Calculate:
         return f'Value 1: {self.value1}\nValue 2: {self.value2}\nDifficulty: {self.difficulty}\nOperation: {op}'
 
     def check_result(self: object, user: int) -> bool:
-        pass
+        right_answer: bool = False
+
+        if self.result == right_answer:
+            print("YOU'RE RIGHT!")
+            right_answer = True
+        else:
+            print("Sorry, that's not the right answer :(")
+        print(f'{self.value1} {self._operation_symbol} {self.value2} = {self.result}')
+        return right_answer
 
     def show_operation(self: object) -> None:
         pass
