@@ -76,7 +76,7 @@ class Calculate:
     def check_result(self: object, user: int) -> bool:
         right_answer: bool = False
 
-        if self.result == right_answer:
+        if self.result == user:
             print("YOU'RE RIGHT!")
             right_answer = True
         else:
