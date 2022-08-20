@@ -31,11 +31,26 @@ class Calculate:
 
     @property
     def _generate_value(self: object) -> int:
-        pass
+        if self.difficulty == 1:
+            return randint(0, 10)
+        elif self.difficulty == 2:
+            return randint(0, 100)
+        elif self.difficulty == 3:
+            return randint(0, 1000)
+        elif self.difficulty == 4:
+            return randint(0, 10000)
+        else:
+            return randint(0, 100000)
 
     @property
     def _generate_result(self: object) -> int:
-        pass
+        if self.operation == 1:
+            return self.value1 + self.value2
+        elif self.operation == 2:
+            return self.value1 - self.value2
+        else:
+            if self.operation == 3:
+                return self.value1 * self.value2
 
     def __str__(self: object) -> str:
         op: str = ''
